@@ -1,12 +1,15 @@
 package com.cybage.myjavaapp.model;
 
+import java.util.List;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Data
-public class Message {
-    private String message;
+public class GroupResponse {
+    List<Employee> employees;
+    InfraDetails infraDetails;
 }
