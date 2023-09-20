@@ -76,8 +76,8 @@ public class EmployeeController {
         return new ResponseEntity<Object>(new GroupResponse(employees, new InfraDetails(podIp, podNodeIp, podIp, clusterName, nodeName)), HttpStatus.OK);
     }
 
-    @PutMapping("/employees/{id}")
-    public ResponseEntity<Object> deleteEmployee(@PathVariable Long id) {
+    @PutMapping("/employees/{eid}")
+    public ResponseEntity<Object> deleteEmployee(@PathVariable Long eid) {
         if (!employees.stream().filter(null).findAny().isPresent()) {
             return new ResponseEntity<Object>(new ErrorResponse(new Message("Employee with the given id is not present"), new InfraDetails(podIp, podNodeIp, podIp, clusterName, nodeName)), HttpStatus.BAD_REQUEST);
         }
